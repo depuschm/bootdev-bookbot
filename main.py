@@ -19,15 +19,12 @@ def count_characters(text):
             result[char_lower] += 1
     return result
 
-def sort_on(dict):
-    return dict["num"]
-
 def print_report(path_to_file, word_count, character_count):
     print(f"--- Begin report of {path_to_file} ---")
     print(f"{word_count} words found in the document\n")
 
     is_alpha = lambda x : x.isalpha()
-    characters_alphabet = filter(is_alpha, character_count)
+    characters_alphabet = {k:v for (k,v) in sorted(character_count.items(), key=lambda item: item[1], reverse=True) if is_alpha(k) }
     for char in characters_alphabet:
         print(f"The '{char}' character was found {character_count[char]} times")
 
