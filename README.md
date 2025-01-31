@@ -12,3 +12,8 @@ Add the first book from:
 https://raw.githubusercontent.com/asweigart/codebreaker/master/frankenstein.txt
 
 (copy and paste everything into a "frankenstein.txt" in the books directory)
+
+## Program
+
+The Python program can be run with "python3 main.py".
+It will print a report of words and characters for "frankenstein.txt".
