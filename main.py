@@ -1,23 +1,11 @@
+from stats import count_words, count_characters
+
 def main(path_to_file):
     with open(path_to_file) as f:
         file_contents = f.read()
         word_count = count_words(file_contents)
         char_count = count_characters(file_contents)
         print_report(path_to_file, word_count, char_count)
-
-def count_words(text):
-    words = text.split()
-    return len(words)
-
-def count_characters(text):
-    result = {}
-    for char in text:
-        char_lower = char.lower()
-        if char_lower not in result:
-            result[char_lower] = 1
-        else:
-            result[char_lower] += 1
-    return result
 
 def sort_on(d):
     return d[1]
