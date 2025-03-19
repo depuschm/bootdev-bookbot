@@ -14,8 +14,4 @@ def main():
         char_count = count_characters(file_contents)
         print_report(path_to_file, word_count, char_count)
 
-if not len(sys.argv) == 2:
-        print("Usage: python3 main.py <path_to_book>")
-        sys.exit(1)
-
 main()
